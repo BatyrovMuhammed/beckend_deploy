@@ -24,8 +24,6 @@ jobs:
       - run:
           name: Install SSH
           command: |
-            set -x
-            
             echo $SSH_PRIVATE_KEY | base64 --decode > ./privateKey.pem
             chmod 400 privateKey.pem
       - run:
